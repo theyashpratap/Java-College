@@ -1,0 +1,71 @@
+package project2017;
+import java.util.*;
+
+public class Book {
+	Scanner s=new Scanner(System.in);
+	   public int book_id,year;
+	   public String book_title;
+	   public String publisher;
+	   public void add_book()
+	   {
+			System.out.println("Enter title");
+			book_title=s.nextLine();
+			System.out.println("Enter book publisher");
+			publisher=s.nextLine();
+			System.out.println("Enter book id");
+			book_id=s.nextInt();
+			System.out.println("Enter book year");
+			year=s.nextInt();
+	   }
+	   public void delete_book()
+	   {
+		   year=0;
+		   System.out.println("Book record is deleted");
+	   }
+	   public void modify_book_record()
+	   {
+		   System.out.println("Press 1 to modify book title");
+		   System.out.println("Press 2 to modify publisher");
+		   System.out.println("Press 3 to modify year");
+		   int choice=s.nextInt();
+		   if(choice==1)
+		   {
+			   System.out.println("Enter new book title");
+			   book_title=s.nextLine();
+		   }
+		   else if(choice==2)
+		   {
+			   System.out.println("Enter new book publisher");
+			   publisher=s.nextLine(); 
+		   }
+		   else if(choice==3)
+		   {
+			   System.out.println("Enter new book year");
+			   year=s.nextInt(); 
+		   }
+		   else
+		   System.out.println("Wrong choice entered");
+	   }
+	   public void display_book_record()
+	   {
+		   System.out.print("Book ID :");
+		   System.out.println(book_id);
+		   System.out.print("Book Name :");
+		   System.out.println(book_title);
+		   System.out.print("Publisher :");
+		   System.out.println(publisher);
+		   System.out.print("Year :");
+		   System.out.println(year);
+	   }
+	   public int search_book(int id)
+	   {
+	   	
+	   	if(book_id==id)
+	       return 1;
+	   	else
+	   	return 0;
+	   }
+	   
+
+
+}
